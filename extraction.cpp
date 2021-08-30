@@ -13,8 +13,6 @@ int main()
 
     using the above functions to get first and second character from person's first and last name
     */
-    
-
     std::fstream my_file;
 
     my_file.open("text.txt", std::ios::in | std::ios::binary);
@@ -27,14 +25,10 @@ int main()
 
         char buffer[50];
 
-        
-
         //Snippet is for first name in full and initial i.e. Peter M. 
         do
         {
             my_file.getline(buffer, 50, ' ');
-
-            
 
             last = my_file.get();
 
@@ -43,7 +37,6 @@ int main()
             std::cout << buffer <<" "<< last <<". "<< std::endl;
 
         } while (!my_file.eof());
-
 
         // next snippet is for initials only Felix Young obtains FY
 
@@ -66,9 +59,5 @@ int main()
     {
         std::cout << "error opening the file" << std::endl;
     }
-
-    
-
-
 }
 
