@@ -1,4 +1,4 @@
-// extraction.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Written by Felix @kimzaf (Twitter handle)
 //
 
 #include <iostream>
