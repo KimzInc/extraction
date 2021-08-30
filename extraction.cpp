@@ -22,13 +22,32 @@ int main()
 
     if (my_file.is_open())
     {
-        char first, last;
+        //char first, 
+        char last;
 
         char buffer[50];
 
-        //first character from name: example Peter - P
+        
 
+        //Snippet is for first name in full and initial i.e. Peter M. 
         do
+        {
+            my_file.getline(buffer, 50, ' ');
+
+            
+
+            last = my_file.get();
+
+            my_file.ignore(40, '\n');
+
+            std::cout << buffer <<" "<< last <<". "<< std::endl;
+
+        } while (!my_file.eof());
+
+
+        // next snippet is for initials only Felix Young obtains FY
+
+       /* do
         {
             first = my_file.get();
 
@@ -40,23 +59,8 @@ int main()
 
             std::cout << first << last << std::endl;
 
-        } while (!my_file.eof());
+        } while (!my_file.eof());*/
         
-       
-
-        //do
-        //{
-        //    //get line gets the file line for '\n'
-        //    my_file.getline(buffer, 50);
-
-        //    //'k' is a delimiter - where it should stop 
-        //   // my_file.getline(buffer, 50, 'K');
-
-        //    std::cout << buffer << std::endl;
-
-
-        //} while (!my_file.eof());
-       
     }
     else
     {
